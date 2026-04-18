@@ -26,5 +26,6 @@
 	</properties>
 
 	<modules>
+		<module>../dgp-core</module>
 	</modules>
 </project>
