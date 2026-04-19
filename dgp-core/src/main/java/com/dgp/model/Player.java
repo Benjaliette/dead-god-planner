@@ -4,20 +4,21 @@ import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "players")
 public class Player {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    @Nonnull
     @Column(name = "it_game", nullable = false)
     private Long itGame;
 
-    @Nonnull
+    @Column(name = "name", nullable = false)
+    private String name;
+
     @Column(name = "skin", nullable = false)
     private String skin;
 
-    @Nonnull
     @Column(name = "hp", nullable = false)
     private Integer hp;
 
@@ -39,27 +40,23 @@ public class Player {
     @Column(name = "costume")
     private Integer costume;
 
-    @Nonnull
     @Column(name = "skinColor", nullable = false)
     private Integer skinColor;
 
     @Column(name = "costumeSuffix")
-    private Integer costumeSuffix;
+    private String costumeSuffix;
 
     @Column(name = "bombs")
     private Integer bombs;
 
-    @Nonnull
     @Column(name = "nameimage", nullable = false)
-    private Integer nameimage;
+    private String nameimage;
 
-    @Nonnull
     @Column(name = "portrait", nullable = false)
-    private Integer portrait;
+    private String portrait;
 
-    @Nonnull
     @Column(name = "birthright", nullable = false)
-    private Integer birthright;
+    private String birthright;
 
     @Column(name = "card")
     private Integer card;
