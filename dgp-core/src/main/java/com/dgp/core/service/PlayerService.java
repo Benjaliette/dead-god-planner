@@ -1,6 +1,6 @@
-package com.dgp.service;
+package com.dgp.core.service;
 
-import com.dgp.dao.PlayerDao;
+import com.dgp.core.dao.PlayerDao;
 import org.springframework.stereotype.Service;
 
 @Service

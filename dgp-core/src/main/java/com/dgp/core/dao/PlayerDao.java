@@ -1,6 +1,6 @@
-package com.dgp.dao;
+package com.dgp.core.dao;
 
-import com.dgp.model.Player;
+import com.dgp.core.model.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
