@@ -29,5 +29,6 @@
 		<module>../dgp-core</module>
         <module>../dgp-enregistrerResourcesJeu-batch</module>
 		<module>../dgp-ddl</module>
+		<module>../dgp-tests</module>
 	</modules>
 </project>
