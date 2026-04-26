@@ -159,7 +159,7 @@ public class PlayerDto {
         return pill;
     }
 
-    public Boolean canShoot() {
+    public Boolean getCanShoot() {
         return canShoot;
     }
 

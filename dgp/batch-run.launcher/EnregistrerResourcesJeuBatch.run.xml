@@ -2,7 +2,6 @@
   <configuration default="false" name="EnregistrerResourcesJeuBatch" type="Application" factoryName="Application" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="com.dgp.enregistrerresourcesjeu.EnregistrerResourcesJeuBatch" />
     <module name="dgp-enregistrerResourcesJeu-batch" />
-    <option name="PROGRAM_PARAMETERS" value="--inDir=$USER_HOME$/Documents/Dev/BindingOfIsaacProject/resources --resourceType=players" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="com.dgp.*" />

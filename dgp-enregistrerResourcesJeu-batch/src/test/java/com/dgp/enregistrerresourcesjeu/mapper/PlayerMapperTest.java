@@ -18,6 +18,7 @@ public class PlayerMapperTest extends AbstractDgpUnitTest {
         PlayerDto playerDto = new PlayerDto();
         playerDto.setName("#KEEPER_NAME");
         playerDto.setHp(1);
+        playerDto.setCanShoot(true);
 
         // WHEN
         Player player = playerMapper.toEntity(playerDto);
@@ -25,6 +26,7 @@ public class PlayerMapperTest extends AbstractDgpUnitTest {
         // THEN
         assertThat(player.getName()).as("mapping du player avec le nom").isEqualTo("Keeper");
         assertThat(player.getHp()).as("mapping du player avec les hp").isEqualTo(1);
+        assertThat(player.getCanShoot()).as("mapping du player avec canShoot").isTrue();
     }
 
     @Test

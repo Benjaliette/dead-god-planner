@@ -14,6 +14,7 @@ import java.util.StringJoiner;
 public interface PlayerMapper {
     @Mapping(source = "name", target = "name", qualifiedByName = "modifyPlayerName")
     @Mapping(source = "hp", target = "hp", defaultValue = "0")
+    @Mapping(source = "canShoot", target = "canShoot")
     Player toEntity(final PlayerDto playerDto);
 
     @Named("modifyPlayerName")
