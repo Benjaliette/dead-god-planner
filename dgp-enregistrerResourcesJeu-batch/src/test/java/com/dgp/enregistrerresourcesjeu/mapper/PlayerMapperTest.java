@@ -17,6 +17,7 @@ public class PlayerMapperTest extends AbstractDgpUnitTest {
         // GIVEN
         PlayerDto playerDto = new PlayerDto();
         playerDto.setName("#KEEPER_NAME");
+        playerDto.setBirthright("#KEEPER_BIRTHRIGHT");
         playerDto.setHp(1);
         playerDto.setCanShoot(true);
 
@@ -34,6 +35,7 @@ public class PlayerMapperTest extends AbstractDgpUnitTest {
         // GIVEN
         PlayerDto playerDto = new PlayerDto();
         playerDto.setName("#THE_LOST_NAME");
+        playerDto.setBirthright("#THE_LOST_BIRTHRIGHT");
         playerDto.setHp(1);
 
         // WHEN
@@ -49,6 +51,7 @@ public class PlayerMapperTest extends AbstractDgpUnitTest {
         // GIVEN
         PlayerDto playerDto = new PlayerDto();
         playerDto.setName("#KEEPER_NAME");
+        playerDto.setBirthright("#KEEPER_BIRTHRIGHT");
 
         // WHEN
         Player player = playerMapper.toEntity(playerDto);
@@ -56,5 +59,19 @@ public class PlayerMapperTest extends AbstractDgpUnitTest {
         // THEN
         assertThat(player.getName()).as("mapping du player avec le nom").isEqualTo("Keeper");
         assertThat(player.getHp()).as("HP = 0 quand null dans le DTO").isEqualTo(0);
+    }
+
+    @Test
+    public void testToEntityAvecTaintedPlayer() {
+        // GIVEN
+        PlayerDto playerDto = new PlayerDto();
+        playerDto.setName("#ISAAC_NAME");
+        playerDto.setBirthright("#ISAAC_B_BIRTHRIGHT");
+
+        // WHEN
+        Player player = playerMapper.toEntity(playerDto);
+
+        // THEN
+        assertThat(player.getName()).as("mapping du player avec le nom").isEqualTo("Tainted Isaac");
     }
 }
