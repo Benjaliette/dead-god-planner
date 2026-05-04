@@ -30,5 +30,6 @@
         <module>../dgp-enregistrerResourcesJeu-batch</module>
 		<module>../dgp-ddl</module>
 		<module>../dgp-tests</module>
-	</modules>
+        <module>../dgp-rest-api</module>
+    </modules>
 </project>
