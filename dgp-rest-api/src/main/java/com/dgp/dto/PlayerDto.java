@@ -1,7 +1,5 @@
 package com.dgp.dto;
 
-import java.util.List;
-
 public class PlayerDto {
     private Long itGame;
 
@@ -46,6 +44,10 @@ public class PlayerDto {
     private Boolean canShoot;
 
     private String extraportrait;
+
+    private boolean playable;
+
+    private boolean tainted;
 
     public Long getItGame() {
         return itGame;
@@ -221,6 +223,22 @@ public class PlayerDto {
 
     public void setExtraportrait(String extraportrait) {
         this.extraportrait = extraportrait;
+    }
+
+    public boolean isPlayable() {
+        return playable;
+    }
+
+    public void setPlayable(boolean playable) {
+        this.playable = playable;
+    }
+
+    public boolean isTainted() {
+        return tainted;
+    }
+
+    public void setTainted(boolean tainted) {
+        this.tainted = tainted;
     }
 }
 

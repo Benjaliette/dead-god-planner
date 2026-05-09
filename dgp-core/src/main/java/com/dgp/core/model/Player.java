@@ -1,13 +1,12 @@
 package com.dgp.core.model;
 
-import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "players")
 public class Player {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "it_game", nullable = false)
@@ -76,189 +75,209 @@ public class Player {
     @Column(name = "extraportrait")
     private String extraportrait;
 
-    // ====== GETTERS ======== //
+    @Column(name = "playable", nullable = false)
+    private boolean playable;
+
+    @Column(name = "tainted", nullable = false)
+    private boolean tainted;
+
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getItGame() {
         return itGame;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getSkin() {
-        return skin;
-    }
-
-    public Integer getHp() {
-        return hp;
-    }
-
-    public Integer getArmor() {
-        return armor;
-    }
-
-    public Integer getCoins() {
-        return coins;
-    }
-
-    public Integer getItems() {
-        return items;
-    }
-
-    public Integer getAchievement() {
-        return achievement;
-    }
-
-    public Integer getBlack() {
-        return black;
-    }
-
-    public Integer getCostume() {
-        return costume;
-    }
-
-    public Integer getSkinColor() {
-        return skinColor;
-    }
-
-    public String getCostumeSuffix() {
-        return costumeSuffix;
-    }
-
-    public Integer getBombs() {
-        return bombs;
-    }
-
-    public String getNameimage() {
-        return nameimage;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getBirthright() {
-        return birthright;
-    }
-
-    public Integer getCard() {
-        return card;
-    }
-
-    public Integer getPocketActive() {
-        return pocketActive;
-    }
-
-    public Integer getKeys() {
-        return keys;
-    }
-
-    public Integer getPill() {
-        return pill;
-    }
-
-    public Boolean getCanShoot() {
-        return canShoot;
-    }
-
-    public String getExtraportrait() {
-        return extraportrait;
-    }
-
-    // ====== SETTERS ======== //
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public void setItGame(Long itGame) {
         this.itGame = itGame;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+    public String getSkin() {
+        return skin;
+    }
+
     public void setSkin(String skin) {
         this.skin = skin;
+    }
+
+    public Integer getHp() {
+        return hp;
     }
 
     public void setHp(Integer hp) {
         this.hp = hp;
     }
 
+    public Integer getArmor() {
+        return armor;
+    }
+
     public void setArmor(Integer armor) {
         this.armor = armor;
+    }
+
+    public Integer getCoins() {
+        return coins;
     }
 
     public void setCoins(Integer coins) {
         this.coins = coins;
     }
 
+    public Integer getItems() {
+        return items;
+    }
+
     public void setItems(Integer items) {
         this.items = items;
+    }
+
+    public Integer getAchievement() {
+        return achievement;
     }
 
     public void setAchievement(Integer achievement) {
         this.achievement = achievement;
     }
 
+    public Integer getBlack() {
+        return black;
+    }
+
     public void setBlack(Integer black) {
         this.black = black;
+    }
+
+    public Integer getCostume() {
+        return costume;
     }
 
     public void setCostume(Integer costume) {
         this.costume = costume;
     }
 
+    public Integer getSkinColor() {
+        return skinColor;
+    }
+
     public void setSkinColor(Integer skinColor) {
         this.skinColor = skinColor;
+    }
+
+    public String getCostumeSuffix() {
+        return costumeSuffix;
     }
 
     public void setCostumeSuffix(String costumeSuffix) {
         this.costumeSuffix = costumeSuffix;
     }
 
+    public Integer getBombs() {
+        return bombs;
+    }
+
     public void setBombs(Integer bombs) {
         this.bombs = bombs;
+    }
+
+    public String getNameimage() {
+        return nameimage;
     }
 
     public void setNameimage(String nameimage) {
         this.nameimage = nameimage;
     }
 
+    public String getPortrait() {
+        return portrait;
+    }
+
     public void setPortrait(String portrait) {
         this.portrait = portrait;
+    }
+
+    public String getBirthright() {
+        return birthright;
     }
 
     public void setBirthright(String birthright) {
         this.birthright = birthright;
     }
 
+    public Integer getCard() {
+        return card;
+    }
+
     public void setCard(Integer card) {
         this.card = card;
+    }
+
+    public Integer getPocketActive() {
+        return pocketActive;
     }
 
     public void setPocketActive(Integer pocketActive) {
         this.pocketActive = pocketActive;
     }
 
+    public Integer getKeys() {
+        return keys;
+    }
+
     public void setKeys(Integer keys) {
         this.keys = keys;
+    }
+
+    public Integer getPill() {
+        return pill;
     }
 
     public void setPill(Integer pill) {
         this.pill = pill;
     }
 
+    public Boolean getCanShoot() {
+        return canShoot;
+    }
+
     public void setCanShoot(Boolean canShoot) {
         this.canShoot = canShoot;
     }
 
+    public String getExtraportrait() {
+        return extraportrait;
+    }
+
     public void setExtraportrait(String extraportrait) {
         this.extraportrait = extraportrait;
+    }
+
+    public boolean isPlayable() {
+        return playable;
+    }
+
+    public void setPlayable(boolean playable) {
+        this.playable = playable;
+    }
+
+    public boolean isTainted() {
+        return tainted;
+    }
+
+    public void setTainted(boolean tainted) {
+        this.tainted = tainted;
     }
 }

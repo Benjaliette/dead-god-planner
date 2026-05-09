@@ -1,5 +1,6 @@
 package com.dgp.enregistrerresourcesjeu.processor;
 
+import com.dgp.enregistrerresourcesjeu.constantes.EnregistrerResourcesJeuConstantes;
 import com.dgp.enregistrerresourcesjeu.item.PlayerDto;
 import com.dgp.enregistrerresourcesjeu.mapper.PlayerMapper;
 import com.dgp.core.model.Player;
@@ -16,6 +17,12 @@ public class ResourceJeuProcessor implements ItemProcessor<PlayerDto, Player> {
     @Override
     public @Nullable Player process(PlayerDto item) throws Exception {
         Player player = playerMapper.toEntity(item);
+
+        player.setTainted(player.getName().startsWith("Tainted"));
+
+        boolean isPlayable = !EnregistrerResourcesJeuConstantes.NON_PLAYABLE_PLAYERS.contains(player.getItGame());
+        player.setPlayable(isPlayable);
+
         return player;
     }
 }

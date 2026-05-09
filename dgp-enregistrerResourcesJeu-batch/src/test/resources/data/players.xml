@@ -15,8 +15,8 @@
             skinColor="0"
             nameimage="charactername_isaac.png"
             portrait="characterportrait_isaac.png"
-            birthright="collectibles_619_yourbirthright.png"
-            canShoot="true" />
+            birthright="#ISAAC_BIRTHRIGHT"
+            canShoot="true"/>
     <player id="2"
             name="#MAGDALENE_NAME"
             skin="character_002_magdalene.png"
@@ -32,8 +32,8 @@
             skinColor="1"
             nameimage="charactername_magdalene.png"
             portrait="characterportrait_magdalene.png"
-            birthright="collectibles_619_magdalenebirthright.png"
-            canShoot="true" />
+            birthright="#MAGDALENE_BIRTHRIGHT"
+            canShoot="true"/>
     <player id="3"
             name="#THE_LOST_NAME"
             skin="character_012_thelost.png"
@@ -48,6 +48,14 @@
             skinColor="4"
             nameimage="charactername_thelost.png"
             portrait="characterportrait_thelost.png"
-            birthright="collectibles_619_thelostbirthright.png"
-            canShoot="true" />
+            birthright="#THE_LOST_BIRTHRIGHT"
+            canShoot="true"/>
+    <player id="37" name="#JACOB_NAME" skin="Character_019b_Jacob.png" costume="95" hp="6" achievement="490"
+            nameimage="PlayerName_02x_Jacob.png"
+            portrait="PlayerPortrait_Jacob_b.png" skinColor="-1" pocketActive="722"
+            birthright="#JACOB_B_BIRTHRIGHT"/>
+    <player id="38" name="#LAZARUS_NAME" skin="Character_009b_Lazarus2.png" armor="4" achievement="-2"
+            nameimage="PlayerName_10_Lazarus.png"
+            portrait="PlayerPortrait_Lazarus_b_dead.png" costume="104" skinColor="0" pocketActive="711"
+            birthright="#LAZARUS_B_BIRTHRIGHT"/>
 </players>
