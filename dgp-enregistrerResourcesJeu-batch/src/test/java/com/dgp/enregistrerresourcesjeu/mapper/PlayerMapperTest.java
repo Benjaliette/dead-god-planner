@@ -18,6 +18,9 @@ public class PlayerMapperTest extends AbstractDgpUnitTest {
         PlayerDto playerDto = new PlayerDto();
         playerDto.setName("#KEEPER_NAME");
         playerDto.setBirthright("#KEEPER_BIRTHRIGHT");
+        playerDto.setNameimage("PlayerName_14_TheKeeper.png");
+        playerDto.setPortrait("PlayerPortrait_Keeper.png");
+        playerDto.setSkin("Character_015_Keeper.png");
         playerDto.setHp(1);
         playerDto.setCanShoot(true);
 
@@ -28,6 +31,9 @@ public class PlayerMapperTest extends AbstractDgpUnitTest {
         assertThat(player.getName()).as("mapping du player avec le nom").isEqualTo("Keeper");
         assertThat(player.getHp()).as("mapping du player avec les hp").isEqualTo(1);
         assertThat(player.getCanShoot()).as("mapping du player avec canShoot").isTrue();
+        assertThat(player.getNameimage()).as("mapping de l'image nom du player avec l'url").isEqualTo("http://jq8zqnl4lzomtrujfdrkadqk.88.182.27.241.sslip.io/gfx/ui/boss/playername_14_thekeeper.png");
+        assertThat(player.getPortrait()).as("mapping du portrait du player avec l'url").isEqualTo("http://jq8zqnl4lzomtrujfdrkadqk.88.182.27.241.sslip.io/gfx/ui/stage/playerportrait_keeper.png");
+        assertThat(player.getSkin()).as("mapping du skin du player avec l'url").isEqualTo("http://jq8zqnl4lzomtrujfdrkadqk.88.182.27.241.sslip.io/gfx/characters/costumes/character_015_keeper.png");
     }
 
     @Test

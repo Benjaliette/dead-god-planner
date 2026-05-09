@@ -26,10 +26,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import java.net.MalformedURLException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -38,19 +40,21 @@ import java.nio.file.Paths;
 public class EnregistrerResourcesJeuBatchConfig {
     @Bean
     @StepScope
-    public StaxEventItemReader<PlayerDto> resourceJeuReader(@Value("#{stepExecution}") StepExecution stepExecution) {
+    public StaxEventItemReader<PlayerDto> resourceJeuReader(@Value("#{stepExecution}") StepExecution stepExecution) throws MalformedURLException {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setClassesToBeBound(PlayerDto.class);
 
         JobExecution jobExecution = stepExecution.getJobExecution();
         JobParameters jobParameters = jobExecution.getJobParameters();
         String inputDirectory = jobParameters.getString("inDir");
+        String resource = jobParameters.getString("resource");
+        String fullUrl = inputDirectory + resource + ".xml";
 
-        Path filePath = Paths.get(inputDirectory, "/players.xml");
+        //Path filePath = Paths.get(inputDirectory, "/players.xml");
 
         StaxEventItemReader<PlayerDto> reader = new StaxEventItemReaderBuilder<PlayerDto>()
                 .name("playerReader")
-                .resource(new FileSystemResource(filePath.toFile()))
+                .resource(new UrlResource(fullUrl))
                 .addFragmentRootElements("player")
                 .unmarshaller(marshaller)
                 .build();
