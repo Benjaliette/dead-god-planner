@@ -17,4 +17,16 @@ public class PlayerService {
     public List<Player> findAll() {
         return playerDao.findAll();
     }
+
+    public List<Player> findAllPlayablePlayers() {
+        return playerDao.findPlayablePlayers();
+    }
+
+    public List<Player> findAllPlayableNormalPlayers() {
+        return playerDao.findPlayableNormalPlayers();
+    }
+
+    public List<Player> findAllPlayableTaintedPlayers() {
+        return playerDao.findPlayableTaintedPlayers();
+    }
 }
