@@ -216,7 +216,7 @@
     // Configuration des environnements
     const envConfigs = {
         'DEV': 'http://localhost:8080',
-        'PROD': 'http://batch-admin.prod.internal:8080'
+        'PROD': 'https://batch.deadgodplanner.click'
     };
 
     // Configuration des jobs
@@ -225,7 +225,7 @@
             title: 'Save Game Resources',
             endpoint: '/start',
             params: [
-                { key: 'inDir', label: 'Input Directory', default: '/Users/XXX/Documents/resources' },
+                { key: 'inDir', label: 'Input Directory', default: 'https://resources.deadgodplanner.click/' },
                 { key: 'resource', label: 'Resource', default: 'players' }
             ]
         },
