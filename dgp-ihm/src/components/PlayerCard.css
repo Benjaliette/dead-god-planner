@@ -1,0 +1,7 @@
+.character-sprite {
+  width: 32px;
+  height: 32px;
+  background-image: url("/sprites/characters.png");
+  background-position: -64px -32px; /* X, Y de la case voulue */
+  image-rendering: pixelated;
+}
