@@ -1,0 +1,9 @@
+.git
+.idea
+.vscode
+.DS_Store
+**/target
+**/node_modules
+dgp-ihm/dist
+**/*.iml
+**/.DS_Store
